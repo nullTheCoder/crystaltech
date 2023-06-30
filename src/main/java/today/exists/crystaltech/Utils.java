@@ -1,4 +1,4 @@
-package today.exists.crystaltech.Main;
+package today.exists.crystaltech;
 
 import org.waveapi.api.items.WaveItem;
 import org.waveapi.api.items.block.blockentities.types.ContainerTile;
@@ -21,6 +21,9 @@ public class Utils {
     }
 
     public static int takeItems(ContainerTile tile, int amount, WaveItem item) {
+        if (tile == null) {
+            return 0;
+        }
         int total = 0;
         for (int i = 0 ; i < tile.getSize() ; i++) {
             if (total == amount) {

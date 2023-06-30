@@ -1,7 +1,8 @@
-package today.exists.crystaltech.Main;
+package today.exists.crystaltech;
 
 import org.waveapi.api.WaveMod;
 import org.waveapi.api.items.WaveTab;
+import today.exists.crystaltech.items.Items;
 
 public class Main extends WaveMod {
     public static WaveMod instance;
@@ -17,7 +18,7 @@ public class Main extends WaveMod {
         tab = new WaveTab("crystaltech", "crystaltech/icon.png", this)
                 .addTranslation("en_us", "CrystalTech");
 
-
+        Items.register();
 
 
     }
